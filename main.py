@@ -1,16 +1,21 @@
 # This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+#import csv
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+#def Load_Packages(fileName):
+   # with open(fileName) as package_data:
+       # packageInfo = csv.reader(package_data, delimiter=',')
+       # next(packageInfo)
+       # for package in packageInfo:
+           # packID = int(package[0])
+           # packAddress = package[1]
+           # packCity =  package[2]
+           # packZip =  package[3]
+           # packState = package[4]
+          #  packDeadline =  package[5]
+          #  packStatus =  "Waiting to be Loaded"
+           # packWeight =  package[7]
+
