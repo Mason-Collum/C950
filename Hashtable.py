@@ -1,25 +1,29 @@
 class Hashtable:
-    def __init__(self, capactity_initial = 10):
-
+    def __init__(self, capactity_initial=40):
         self.table = []
         for i in range(capactity_initial):
             self.table.append([])
 
-    def insert(self, item):
-        bucket = hash(item) % len(self.table)
+    def insert(self, key, item, ):
+        bucket = hash(key) % len(self.table)
         bucket_list = self.table[bucket]
 
-        bucket_list.append(item)
+        for ki in bucket_list:
+            if ki[0] == key:
+                ki[1] = item
+                return True
+
+        value_key = [key, item]
+        bucket_list.append(value_key)
+        return True
 
     def search(self, key):
         bucket = hash(key) % len(self.table)
         bucket_list = self.table[bucket]
 
-        if key in bucket_list:
-            item_index = bucket_list.index(key)
-            return bucket_list[item_index]
-        else:
-            return None
+        for k in bucket_list:
+            if k[0] == key:
+                return k[1]
 
     def remove(self, key):
         bucket = hash(key) % len(self.table)
